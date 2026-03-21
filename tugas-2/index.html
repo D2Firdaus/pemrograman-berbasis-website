@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran Sederhana</title>
+  </head>
+  <body>
+    <form action="" method="">
+      <!-- Username -->
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" placeholder="Name" />
+      <br />
+
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="email" placeholder="Email" />
+      <br />
+
+      <!-- Gender -->
+      <label for="gender">Jenis Kelamin:</label>
+      <input type="radio" name="gender" value="Laki-laki" />
+      <label for="male">Laki-laki</label>
+      <input type="radio" name="gender" value="Perempuan" />
+      <label for="female">Perempuan</label>
+      <br />
+
+      <!-- Hobi -->
+      <label for="hobi">Hobi:</label>
+      <input type="checkbox" name="hobi" value="Membaca" />
+      <label for="reading">Membaca</label>
+      <input type="checkbox" name="hobi" value="Menulis" />
+      <label for="writing">Menulis</label>
+      <input type="checkbox" name="hobi" value="Olahraga" />
+      <label for="sports">Olahraga</label>
+      <br />
+
+      <!-- Kota -->
+      <label for="city">Kota:</label>
+      <select id="city">
+        <option value="">Loading...</option>
+      </select>
+
+      <br />
+
+      <!-- File Upload -->
+      <label for="file">Upload File</label>
+      <input type="file" name="file" accept=".jpg,.jpeg,.png" />
+      <br />
+
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+
+  <script>
+    fetch("https://alamat.thecloudalert.com/api/kabkota/get/")
+      .then((res) => res.json())
+      .then((data) => {
+        const select = document.getElementById("city");
+        select.innerHTML = '<option value="">Pilih Kota</option>';
+
+        data.result
+          .filter((item) => item.text.startsWith("Kota"))
+          .forEach((kota) => {
+            const option = document.createElement("option");
+            option.value = kota.text;
+            option.textContent = kota.text.replace("Kota ", "");
+            select.appendChild(option);
+          });
+      })
+      .catch(() => {
+        document.getElementById("city").innerHTML =
+          '<option value="">Gagal memuat data</option>';
+      });
+  </script>
+</html>
