@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d3d3d3;
+}
+
+header {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #9c1428;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #d73e3e;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #9c1428;
+}
+
+.main-container {
+  display: flex;
+  gap: 16px;
+  margin: 16px;
+}
+
+/* Form */
+.form-container {
+  flex: 2;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+}
+
+.form-container h2 {
+  margin-bottom: 2px;
+}
+
+.form-container .subtitle {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+/* Every label sits on its own line */
+form label.field-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+/* Text / email / password inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+/* Radio & checkbox rows */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.radio-group label,
+.checkbox-group label {
+  font-size: 1rem;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* Dropdown */
+form select {
+  width: 200px;
+  max-height: 100px;
+}
+
+/* Textarea */
+form textarea {
+  resize: vertical;
+  height: 80px;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Submit button */
+.btn-submit {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.btn-submit:hover {
+  background-color: #2980b9;
+}
+
+/* Sidebar */
+.sidebar-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #bdc3c7;
+  border-radius: 4px;
+  min-height: 300px;
+}
+
+.sidebar-container h2 {
+  margin-bottom: 6px;
+}
+
+.sidebar-container p {
+  font-size: 1rem;
+  color: #000;
+}
