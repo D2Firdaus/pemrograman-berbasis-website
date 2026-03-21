@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Belajar JavaScript</title>
+  </head>
+
+  <body>
+    <h1 id="judul">Selamat Datang</h1>
+    <button onclick="ubahTeks()">Ubah Teks dan Background!</button>
+
+    <script>
+      function ubahTeks() {
+        document.getElementById("judul").innerHTML =
+          "Teks dan background telah berubah!";
+        if (
+          document.getElementById("judul").innerHTML ===
+          "Teks dan background telah berubah!"
+        ) {
+          document.getElementsByTagName("body")[0].style.backgroundColor =
+            "lightblue";
+        }
+      }
+    </script>
+  </body>
+</html>
