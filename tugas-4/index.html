@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cek Grade Mahasiswa</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="gradechecker-container">
+      <h1 class="title">Grade<br />Checker</h1>
+      <div class="input-container">
+        <label for="nim-input">NIM:</label>
+        <input type="text" id="nim-input" placeholder="NIM" />
+        <br />
+        <label for="grade-input">NILAI:</label>
+        <input type="number" id="grade-input" placeholder="0 - 100" />
+        <br />
+        <button onclick="checkGrade()">Cek Grade</button>
+      </div>
+      <div class="grade-container">
+        <h2 id="grade-result">?</h2>
+      </div>
+    </div>
+  </body>
+</html>

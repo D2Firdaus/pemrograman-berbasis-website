@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #214656;
+  --secondary-color: #e0fc4c;
+  --background-color: #d3d3d3;
+  --font-family: "Roboto", sans-serif;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+.gradechecker-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: var(--primary-color);
+  margin: 50px auto;
+  border-radius: 10px;
+  width: 750px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.title {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.input-container label {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.input-container input {
+  padding: 8px 10px;
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
+  color: var(--secondary-color);
+  width: 100%;
+}
+
+.input-container button {
+  padding: 8px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+}
+
+.input-container button:hover {
+  opacity: 0.85;
+}
+
+.grade-container {
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+}
+
+#grade-result {
+  font-size: 5rem;
+  font-style: italic;
+  color: var(--primary-color);
+  text-align: center;
+}
